@@ -49,6 +49,9 @@ return require('packer').startup(function(use)
 	use "github/copilot.vim"
 
 	use "tpope/vim-commentary"
+	-- theme
+	use "EdenEast/nightfox.nvim"
+
 
 	if packer_bootstrap then
     		require('packer').sync()

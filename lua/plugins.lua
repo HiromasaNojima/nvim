@@ -53,6 +53,11 @@ return require('packer').startup(function(use)
 	use "EdenEast/nightfox.nvim"
 
 
+	use { 
+		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
 	if packer_bootstrap then
     		require('packer').sync()
   	end

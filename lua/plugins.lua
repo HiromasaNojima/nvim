@@ -15,16 +15,11 @@ return require('packer').startup(function(use)
 	use { "wbthomason/packer.nvim", opt = true }
 	-- nvim-tree
 	use {
-  		'nvim-tree/nvim-tree.lua',
-		wants = "nvim-web-devicons", 
-		tag = 'nightly',
-		config = function()
-			require("nvim-web-devicons").setup()
-			require("nvim-tree").setup({
-				open_on_setup = true,
-
-			})
-		end	
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons', -- optional, for file icons
+		},
+		tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
 	-- lsp
 	use "neovim/nvim-lspconfig"

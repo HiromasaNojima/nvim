@@ -13,6 +13,9 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
 	use { "wbthomason/packer.nvim", opt = true }
+
+	-- ファイルエクスプローラ検討
+	-- use 'lambdalisue/fern.vim'
 	-- nvim-tree
 	use {
 		'nvim-tree/nvim-tree.lua',
@@ -22,6 +25,7 @@ return require('packer').startup(function(use)
 		tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
 	-- lsp
+
 	use "neovim/nvim-lspconfig"
 
 	-- cmp
@@ -51,6 +55,13 @@ return require('packer').startup(function(use)
 	use { 
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
+	use {
+		'lewis6991/gitsigns.nvim',
+		config = function()
+			require('gitsigns').setup()
+		end
 	}
 
 	if packer_bootstrap then

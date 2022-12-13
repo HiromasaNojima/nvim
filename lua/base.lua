@@ -16,3 +16,6 @@ vim.opt.shiftwidth = 4
 
 -- 行数の表示
 vim.opt.number = true
+
+-- バッファ
+vim.o.hidden = true

@@ -64,6 +64,11 @@ return require('packer').startup(function(use)
 		end
 	}
 
+	use {
+		'zefei/vim-wintabs',
+		'zefei/vim-wintabs-powerline'
+	}
+
 	if packer_bootstrap then
     		require('packer').sync()
   	end

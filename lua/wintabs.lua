@@ -1,6 +1,6 @@
 for k, v in pairs({
-  ['<C-H>'] = '<Plug>(wintabs_next)',
-  ['<C-L>'] = '<Plug>(wintabs_previous)',
+  ['<C-L>'] = '<Plug>(wintabs_next)',
+  ['<C-H>'] = '<Plug>(wintabs_previous)',
   ['<C-T>c'] = '<Plug>(wintabs_close)',
   ['<C-T>u'] = '<Plug>(wintabs_undo)',
   ['<C-T>o'] = '<Plug>(wintabs_only)',
